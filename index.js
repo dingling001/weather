@@ -7,7 +7,7 @@
 // }
 var map = new BMap.Map("allmap");
 // var point = new BMap.Point(116.404, 39.915);
-map.centerAndZoom("西安", 5); // 初始化地图,用城市名设置地图中心点
+map.centerAndZoom("酒泉", 5); // 初始化地图,用城市名设置地图中心点
 map.addControl(new BMap.NavigationControl()); // 添加平移缩放控件
 map.addControl(new BMap.ScaleControl()); // 添加比例尺控件
 // map.addControl(new BMap.OverviewMapControl()); //添加缩略地图控件
@@ -16,79 +16,91 @@ map.enableScrollWheelZoom(); //启用滚轮放大缩小
 // map.centerAndZoom(point, 14);
 
 
-var mymapstyle = [{
-    "featureType": "background",
-    "elementType": "geometry",
-    "stylers": {
-        "color": "#062041bf"
+var mymapstyle = [
+    {
+        "featureType": "background",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#062041bf"
+        }
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#044e97ff"
+        }
+    }, {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#044e9747"
+        }
+    }, {
+        "featureType": "districtlabel",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#009bbfff"
+        }
+    }, {
+        "featureType": "districtlabel",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#000000ff"
+        }
+    }, {
+        "featureType": "poilabel",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#ffffff00"
+        }
+    }, {
+        "featureType": "poilabel",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#ffffff00"
+        }
+    }, {
+        "featureType": "poilabel",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#ffffffff"
+        }
+    }, {
+        "featureType": "nationalway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#fffffff5"
+        }
+    }, {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": {
+            "visibility": "off"
+        },
+
+    },
+    {
+        "featureType": "country",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#054d97",
+            "visibility": "on"
+        }
     }
-}, {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": {
-        "color": "#044e97ff"
-    }
-}, {
-    "featureType": "road",
-    "elementType": "geometry.fill",
-    "stylers": {
-        "color": "#044e9747"
-    }
-}, {
-    "featureType": "districtlabel",
-    "elementType": "labels.text.fill",
-    "stylers": {
-        "color": "#009bbfff"
-    }
-}, {
-    "featureType": "districtlabel",
-    "elementType": "labels.text.stroke",
-    "stylers": {
-        "color": "#000000ff"
-    }
-}, {
-    "featureType": "poilabel",
-    "elementType": "labels.text.fill",
-    "stylers": {
-        "color": "#ffffff00"
-    }
-}, {
-    "featureType": "poilabel",
-    "elementType": "labels.text.stroke",
-    "stylers": {
-        "color": "#ffffff00"
-    }
-}, {
-    "featureType": "poilabel",
-    "elementType": "labels",
-    "stylers": {
-        "visibility": "off"
-    }
-}, {
-    "featureType": "nationalway",
-    "elementType": "labels",
-    "stylers": {
-        "visibility": "off"
-    }
-}, {
-    "featureType": "nationalway",
-    "elementType": "geometry.fill",
-    "stylers": {
-        "color": "#ffffffff"
-    }
-}, {
-    "featureType": "nationalway",
-    "elementType": "labels.text.fill",
-    "stylers": {
-        "color": "#fffffff5"
-    }
-}, {
-    "featureType": "road",
-    "elementType": "labels",
-    "stylers": {
-        "visibility": "off"
-    }
-}]
+]
 // function changeMapStyle(style) {
 // console.log(style)
 // map.setMapStyle({style: style});

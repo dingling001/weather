@@ -636,7 +636,7 @@ function maptype(type) {
         map.centerAndZoom("固原", 6); // 初始化地图,用城市名设置地图中心点
         map.setMapType(BMAP_HYBRID_MAP);
     } else {
-
+        console.log(22)
         map.centerAndZoom("固原", 6); // 初始化地图,用城市名设置地图中心点
         // map.setMapType(BMAP_NORMAL_MAP);
         // map.setMapStyle({style: 'normal'});
@@ -682,19 +682,19 @@ function maptype(type) {
                 "elementType": "geometry",
                 "stylers": {
                     "visibility": "on",
-                    "color": "#8b572a80"
+                    "color": "#8b572a"
                 }
             }, {
                 "featureType": "green",
                 "elementType": "geometry",
                 "stylers": {
-                    "color": "#41750561"
+                    "color": "#0f0"
                 }
             }, {
                 "featureType": "building",
                 "elementType": "geometry.fill",
                 "stylers": {
-                    "color": "#4a4a4aff"
+                    "color": "#000000"
                 }
             }, {
                 "featureType": "estate",
@@ -725,16 +725,18 @@ function maptype(type) {
                 "featureType": "districtlabel",
                 "elementType": "labels.text.fill",
                 "stylers": {
-                    "color": "#4a90e2ff",
+                    "color": "#0ff",
                     "weight": 10
                 }
-            }, {
-                "featureType": "districtlabel",
-                "elementType": "labels.text.stroke",
+            },
+            {
+                "featureType": "background",
+                "elementType": "geometry",
                 "stylers": {
-                    "color": "#ffffff8c"
+                    "visibility": "on"
                 }
-            }]
+            }
+        ]
         map.setMapStyle({styleJson: styjson});
     }
 

@@ -632,6 +632,7 @@ $(".map_select").click(function () {
 
 function maptype(type) {
     map.reset()
+    console.log(GroundOverlay)
     if (type == 1) {
         map.centerAndZoom("固原", 6); // 初始化地图,用城市名设置地图中心点
         map.setMapType(BMAP_HYBRID_MAP);

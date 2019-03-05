@@ -16,13 +16,6 @@
 
 <body>
 <div id="allmap"></div>
-<div id="r-result">
-    <div class="optionpanel">
-        <label>选择主题</label>
-        <select id="stylelist" onchange="changeMapStyle(this.value)"></select>
-    </div>
-    <p>本DEMO为旧版个性化服务代码，推荐使用<a href='//lbsyun.baidu.com/customv2/help.html' target="_blank">V2版本个性化服务</a></p>
-</div>
 <div class="main">
     <div class="header">
         <img src="./img/logo.png" alt="">
@@ -264,8 +257,8 @@
                         <span class="map_control">场景 <span class=" fa fa-caret-down"></span></span>
                         <div class="map_select">
                             <p onclick="mapstyle(1)">地图模式</p>
-                            <p onclick="maptype(1)">卫星图1</p>
-                            <p onclick="maptype()">地形图</p>
+                            <p onclick="maptype(1)">卫星图</p>
+                            <p onclick="maptype(2)">地形图</p>
                             <p onclick="mapstyle('dark')">夜间模式</p>
                         </div>
                     </div>
@@ -458,7 +451,8 @@
 </body>
 
 </html>
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!--<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=6OfVlUwNfHmaerIPH2dd5FKyDEqFYzUy"></script>
 <script type="text/javascript" src="http://lbsyun.baidu.com/custom/stylelist.js"></script>
 <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
